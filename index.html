@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoções - Paróquia Cristo</title>
+    
+    <!-- Meta tags Open Graph (O card que aparece no WhatsApp) -->
+    <meta property="og:title" content="🔴 Nova Devocional Disponível - Assista Agora">
+    <meta property="og:description" content="Clique para assistir ao conteúdo completo diretamente no YouTube.">
+    <meta property="og:image" content="URL_DA_SUA_IMAGEM_1200x630.jpg"> <!-- Cole o link de uma imagem hospedada se quiser -->
+    <meta property="og:type" content="website">
+</head>
+<body style="background: #0f0f0f; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px;">
+    <h2>Redirecionando para o YouTube...</h2>
+    <p>Se não for redirecionado automaticamente, clique no botão:</p>
+    <a id="btn" href="https://www.youtube.com/@paroquiacristoielb" style="background: #ff0000; color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 20px;">Assistir no YouTube</a>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoId = urlParams.get('v');
+        const targetUrl = videoId ? `https://www.youtube.com/watch?v=${videoId}` : 'https://www.youtube.com/@paroquiacristoielb';
+        
+        document.getElementById('btn').href = targetUrl;
+        
+        // Redireciona de forma limpa
+        setTimeout(function() {
+            window.location.replace(targetUrl);
+        }, 400);
+    </script>
+</body>
+</html>
